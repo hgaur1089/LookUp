@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+:root {
+  --primary: #6c2be4;
+  --secondary: #297fd4;
+  --main-darklg: #fff;
+  --main-dark: #fff;
+  --primary-color: #3C4043;
+  --main-light: #eeeeee;
+  --blue: #1A73E8;
+  --lightgrey: #F1F3F4;
+  font-family: 'Google Sans Display',Roboto,Arial,sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 14vh;
+  position: relative;
+  width: 100%;
+  background-color: var(--main-dark);
+}
+
+.logo {
+    padding: 20px 0px 0px 30px;
+}
+.logo > h1 {
+  /* font-size: larger; */
+  background:linear-gradient(to right, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  color: var(--blue);
+}
+
+.main {
+  
+  /* overflow: hidden; */
+  height: 86vh;
+  
+  align-items: center;
+  display: -webkit-inline-box;
+  display: inline-flex;
+  justify-content: space-evenly;
+  min-height: 100%;
+  width: 100vw;
+}
+
+.main__left {
+  /* flex: 1;
+  display: flex;
+  flex-direction: column; */
+    display: inline-flex;
+    flex-basis: 35rem;
+    flex-direction: column;
+    flex: 1;
+    max-width: 40rem;
+    padding: 1em 3em;
+    
+}
+
+.main__left .header {
+    font-family: 'Google Sans Display',Roboto,Arial,sans-serif;
+    font-size: 2.55rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 3.25rem;
+    padding-bottom: 1.5em;
+}
+
+.main__left .description {
+    font-size: 1.125rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.5rem;
+    color: #5f6368;
+    color: var(--gm-color-caption,#5f6368);
+    max-width: 30rem;
+    padding-bottom: 2em;
+}
+
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+.start-meet-btn {
+    text-decoration: none;
+    padding: 0.8rem 1rem;
+    border-radius: 5px;
+    background:linear-gradient(to right, var(--primary), var(--secondary));
+    color: white;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.start-meet-btn:hover {
+    color: white;
+    background-image: linear-gradient(to right, var(--primary) 0%, #9733EE  51%, var(--secondary)  100%);
+}
+
+#invite-link{
+    width: 50%;
+    padding: 0 0 0 1.5rem;
+}
+
+.input-link {
+    text-decoration: none;
+    border: 2px solid grey;
+    padding: 0.6rem;
+    border-radius: 5px;
+    color: grey;
+}
+.input-link:focus {
+  outline-width: 4px;
+  outline-style: solid;
+  outline-color:  #9EC5FE;
+  border: 1px solid #6EA8FE;
+}
+
+.invite-link-btn {
+  border: none;
+  background-color: white;
+  color: grey;
+  font-weight: 600;
+  padding: 0.5rem;
+}
+.invite-link-btn:hover {
+  background-color: #CFE2FF;
+  color: #0A58CA;
+}
+
+.main__right {
+    align-items: center;
+    display: -webkit-inline-box;
+    display: inline-flex;
+    flex-direction: column;
+    flex-basis: 45%;
+    overflow: hidden;
+    padding: 1em 3em;
+}
+.animated_img {
+    overflow: hidden;
+}
+
+.image {
+  width: 500px;
+  border-radius: 10px;
+}
+
+
+@media (max-width: 700px) {
+  .main__right {
+    display: none;
+  }
+  .main__left {
+    width: 100%;
+    flex: 1;
+    align-items: flex-start;
+  }
+  .main__left .header {
+    padding: 1rem 0 2rem 0;
+    font-weight: 700;
+    font-size: 1.8rem;
+    letter-spacing: 0;
+    line-height: 2.5rem;
+  }
+  .options {
+    display: flex;
+    flex-direction: column;
+  }
+  form {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 25px 0 0 0;
+  }
+}
+
+.header__back {
+  display: none;
+  position: absolute;
+  font-size: 1.3rem;
+  top: 17px;
+  left: 28px;
+  color: #fff;
+}
