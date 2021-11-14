@@ -14,6 +14,8 @@ const io = require("socket.io")(server, {
     origin: '*'
   }
 });
+//listening socket io on different port
+io.listen(4000);
 const { ExpressPeerServer } = require("peer");
 const peerServer = ExpressPeerServer(server, {
   debug: true,
