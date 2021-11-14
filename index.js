@@ -50,8 +50,8 @@ io.on("connection", (socket) => {
   });
 });
 
-//listening socket io on different port
-io.listen(4000);
+// //listening socket io on different port
+// io.listen(4000);
 
 server.listen(process.env.PORT || 3000);
 
