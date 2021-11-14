@@ -1,4 +1,4 @@
-const socket = io("/");
+const socket = io.connect("/", {transports: ['polling']});
 const videoGrid = document.getElementById("video-grid");
 const myVideo = document.createElement("video");
 const showChat = document.querySelector("#showChat");
