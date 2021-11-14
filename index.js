@@ -1,8 +1,13 @@
 const express = require("express");
 const app = express();
 const server = require("http").Server(app);
-const { v4: uuidv4 } = require("uuid");
 const UUID = require('./public/uuid');
+
+app.use(express.json());
+app.use(express.urlencoded({
+  extended: true
+}));
+
 app.set("view engine", "ejs");
 const io = require("socket.io")(server, {
   cors: {
@@ -17,13 +22,17 @@ const peerServer = ExpressPeerServer(server, {
 app.use("/peerjs", peerServer);
 app.use(express.static("public"));
 
-app.get("/home", (req, res) => {
+app.get("/", (req, res) => {
   res.render("home");
 })
 
-app.get("/", (req, res) => {
+app.get("/room", (req, res) => {
   res.redirect(`/${UUID()}`);
-  // res.redirect(`/${uuidv4()}`);
+});
+
+app.post("/room-link", (req, res) => {
+  console.log(req.body);
+  res.redirect(`/${req.body.link}`);
 });
 
 app.get("/:room", (req, res) => {

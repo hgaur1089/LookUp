@@ -33,14 +33,14 @@
             </div>
             <div class="options">       
                   <div id="start-meet">
-                    <a href="/" class="start-meet-btn" role="button">
+                    <a href="/room" class="start-meet-btn" role="button">
                         <i class="fas fa-video"></i> New meeting
                     </a>
                   </div>
                   <div id="invite-link">
-                      <form action="/" method="POST">
-                          <input type="text" class="input-link" placeholder="Meeting code" aria-label="Recipient's username" aria-describedby="button-addon2">
-                          <input type="submit" class="invite-link-btn" role="button" value="Join"></input>
+                      <form action="/room-link" method="POST">
+                          <input type="text" class="input-link" name="link" placeholder="Meeting code" required>
+                          <input type="submit" class="invite-link-btn" value="Join"/>
                     </form>
                   </div>      
             </div>
